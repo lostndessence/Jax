@@ -9,4 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+	
+	<plugin spec="https://github.com/lostndessence/Jax/plugins/cordova-plugin-inappbrowser-master/" />
 </widget>
