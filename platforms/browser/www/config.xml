@@ -2,10 +2,10 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Jaxcohome</name>
     <description>
-        A blank PhoneGap app.
+        Explore Jaxcohome with ease from your mobile phone. 
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="rolando@ad-in.us" href="http://ad-in.us">
+        Ad.In Advertising
     </author>
     <content src="index.html" />
     <access origin="*" />

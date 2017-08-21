@@ -2,13 +2,14 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Jaxcohome</name>
     <description>
-        A blank PhoneGap app.
+        Explore Jaxcohome with ease from your mobile phone. 
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="rolando@ad-in.us" href="http://ad-in.us">
+        Ad.In Advertising
     </author>
     <content src="index.html" />
     <access origin="*" />
 	
 	<plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
+	<plugin name="cordova-plugin-network-information" spec="~1.3.3" />
 </widget>
