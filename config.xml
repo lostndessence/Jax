@@ -25,7 +25,7 @@
   <platform name="android" >
 	<splash src="Splash_Screen.png" platform="android" width="320" height="480" />
   </platform>
-  
+   
   <platform name="winphone" />
   
 </widget>
