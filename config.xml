@@ -33,4 +33,14 @@
   <preference name="android-targetSdkVersion" value="12" />
   <preference name="android-installLocation" value="auto" />
   <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />	
+  
+  <!-- Assign Icon-->
+  <icon src="icon.png" /><!-- Default -->
+  <splash src="Splash_Screen.png" platform="ios" width="320" height="480" />
+  <splash src="Splash_Screen.png" platform="android" width="320" height="480" />
+  
+  <platform name="ios">
+	<icon src="icon-ios.png" width="180" height="180" />
+  </platform>
+  
 </widget>

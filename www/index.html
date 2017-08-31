@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width, height=device-height, target-densitydpi=device-dpi">
         <title>Jaxcohome</title>
 		<script>
 			
@@ -29,7 +29,7 @@
 		<script>
 			// Wait for device API libraries to load
 			//
-			document.addEventListener("offline", offlineMode, false);
+			//document.addEventListener("offline", offlineMode, false);
 			document.addEventListener("deviceready", onDeviceReady, false);
 
 			// device APIs are available
@@ -43,9 +43,9 @@
 				 ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
 				 ref.addEventListener('exit', function(event) { alert(event.type); }); */
 			}			
-			function offlineMode(){
+			//function offlineMode(){
 				//var ref = window.open('../www/static/index.html', '_self', 'location=yes');
-			}
+			//}
 			
 		</script>
 		<div id="Load"> </div> 
