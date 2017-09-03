@@ -45,7 +45,7 @@
 	
   
   <!-- Assign Icon-->
-  <icon src="icon-ios.png" /><!-- Default -->
+  <icon src="icon-ios.jpg" /><!-- Default -->
   
   <!--<platform name="ios">
 	<icon src="icon-ios.png" platform="ios" width="180" height="180" />
