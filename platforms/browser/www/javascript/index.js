@@ -1,102 +1,88 @@
-'use strict'
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        console.log('Received Device Ready Event');
+        console.log('calling setup push');
+        app.setupPush();
+    },
+    setupPush: function() {
+        console.log('calling push init');
+        var push = PushNotification.init({
+            "android": {
+                "senderID": "XXXXXXXX"
+            },
+            "browser": {},
+            "ios": {
+                "sound": true,
+                "vibration": true,
+                "badge": true
+            },
+            "windows": {}
+        });
+        console.log('after init');
 
-const contentful = require('contentful')
-const chalk = require('chalk')
-const Table = require('cli-table2')
+        push.on('registration', function(data) {
+            console.log('registration event: ' + data.registrationId);
 
-const SPACE_ID = 'hvztdz9cqcv6'
-const ACCESS_TOKEN = '7c45a765fa6634869e2ad432683afac096407f55fcbd12c728579f66c71c1d17'
+            var oldRegId = localStorage.getItem('registrationId');
+            if (oldRegId !== data.registrationId) {
+                // Save new registration ID
+                localStorage.setItem('registrationId', data.registrationId);
+                // Post registrationId to your app server as the value has changed
+            }
 
-const client = contentful.createClient({
-  // This is the space ID. A space is like a project folder in Contentful terms
-  space: SPACE_ID,
-  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-  accessToken: ACCESS_TOKEN
-})
+            var parentElement = document.getElementById('registration');
+            var listeningElement = parentElement.querySelector('.waiting');
+            var receivedElement = parentElement.querySelector('.received');
 
-console.log(chalk.green.bold('\nWelcome to the Contentful JS Boilerplate\n'))
-console.log('This is a simplified example to demonstrate the usage of the Contentful CDA\n')
+            listeningElement.setAttribute('style', 'display:none;');
+            receivedElement.setAttribute('style', 'display:block;');
+        });
 
-// Entry point of the boilerplate, called at the end.
-function runBoilerplate () {
-  displayContentTypes()
-  .then(displayEntries)
-  .then(() => {
-    console.log('Want to go further? Feel free to check out this guide:')
-    console.log(chalk.cyan('https://www.contentful.com/developers/docs/javascript/tutorials/using-js-cda-sdk/\n'))
-  })
-  .catch((error) => {
-    console.log(chalk.red('\nError occurred:'))
-    if (error.stack) {
-      console.error(error.stack)
-      return
+        push.on('error', function(e) {
+            console.log("push error = " + e.message);
+        });
+
+        push.on('notification', function(data) {
+            console.log('notification event');
+            navigator.notification.alert(
+                data.message,         // message
+                null,                 // callback
+                data.title,           // title
+                'Ok'                  // buttonName
+            );
+       });
     }
-    console.error(error)
-  })
-}
-
-function displayContentTypes () {
-  console.log(chalk.green('Fetching and displaying Content Types ...'))
-
-  return fetchContentTypes()
-  .then((contentTypes) => {
-    // Display a table with Content Type information
-    const table = new Table({
-      head: ['Id', 'Title', 'Fields']
-    })
-    contentTypes.forEach((contentType) => {
-      const fieldNames = contentType.fields
-        .map((field) => field.name)
-        .sort()
-      table.push([contentType.sys.id, contentType.name, fieldNames.join(', ')])
-    })
-    console.log(table.toString())
-
-    return contentTypes
-  })
-}
-
-function displayEntries (contentTypes) {
-  console.log(chalk.green('Fetching and displaying Entries ...'))
-
-  return Promise.all(contentTypes.map((contentType) => {
-    return fetchEntriesForContentType(contentType)
-    .then((entries) => {
-      console.log(`\These are the first 100 Entries for Content Type ${chalk.cyan(contentType.name)}:\n`)
-
-      // Display a table with Entry information
-      const table = new Table({
-        head: ['Id', 'Title']
-      })
-      entries.forEach((entry) => {
-        table.push([entry.sys.id, entry.fields[contentType.displayField] || '[empty]'])
-      })
-      console.log(table.toString())
-    })
-  }))
-}
-
-// Load all Content Types in your space from Contentful
-function fetchContentTypes () {
-  return client.getContentTypes()
-  .then((response) => response.items)
-  .catch((error) => {
-    console.log(chalk.red('\nError occurred while fetching Content Types:'))
-    console.error(error)
-  })
-}
-
-// Load all entries for a given Content Type from Contentful
-function fetchEntriesForContentType (contentType) {
-  return client.getEntries({
-      content_type: contentType.sys.id
-    })
-  .then((response) => response.items)
-  .catch((error) => {
-    console.log(chalk.red(`\nError occurred while fetching Entries for ${chalk.cyan(contentType.name)}:`))
-    console.error(error)
-  })
-}
-
-// Start the boilerplate code
-runBoilerplate()
+};
