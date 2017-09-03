@@ -57,6 +57,6 @@
   </platform>
    
   <platform name="winphone" />
-  <platform name="windows" />
+
   
 </widget>
