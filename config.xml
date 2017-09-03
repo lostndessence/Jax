@@ -49,8 +49,16 @@
   <icon src="icon-ios.jpg" /><!-- Default -->
   
   <platform name="ios">
-	<icon src="icon-ios.jpg" platform="ios" width="180" height="180" />
+	<icon src="icon_180x180.png" platform="ios" width="180" height="180" />
+	<icon src="icon_76x76.png" platform="ios" width="76" height="76" />
+	<icon src="icon_120x120.png" platform="ios" width="120" height="120" />
+	<icon src="icon_152x152.png" platform="ios" width="152" height="152" />
 	<splash src="Splash_Screen.png" platform="ios" width="320" height="480" />
+	<splash src="splash_640x960.png" platform="ios" width="640" height="960" />
+	<splash src="splash_640x1136.png" platform="ios" width="640" height="1136" />
+	<splash src="splash_750x1334.png" platform="ios" width="750" height="1334" />
+	<splash src="splash_1242x2208.png" platform="ios" width="1242" height="2208" />
+	<splash src="splash_2048x1536.png" platform="ios" width="1536" height="2048" />
   </platform>
   
   <platform name="android" >
