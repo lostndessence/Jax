@@ -47,8 +47,8 @@
   <!-- Assign Icon-->
   <icon src="icon-ios.jpg" /><!-- Default -->
   
-  <!--<platform name="ios">
-	<icon src="icon-ios.png" platform="ios" width="180" height="180" />
+  <platform name="ios">
+	<icon src="icon-ios.jpg" platform="ios" width="180" height="180" />
 	<splash src="Splash_Screen.png" platform="ios" width="320" height="480" />
   </platform>
   
@@ -57,6 +57,6 @@
   </platform>
    
   <platform name="winphone" />
-  <platform name="windows" /> -->
+  <platform name="windows" />
   
 </widget>
