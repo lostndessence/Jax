@@ -44,16 +44,29 @@
 	
 	
   
-  <!-- Assign Icon-->
-  <icon src="icon-ios.png" /><!-- Default -->
-  <splash src="splash.png" /><!-- Default -->
+  <!-- Assign Icons and Splash-->
+  <icon src="Icon.png" /><!-- Default -->
+  <splash src="Default.png" /><!-- Default -->
   
   <platform name="ios">
-	<icon src="icon_180x180.png" platform="ios" width="180" height="180" />
-	<icon src="icon_76x76.png" platform="ios" width="76" height="76" />
-	<icon src="icon_120x120.png" platform="ios" width="120" height="120" />
-	<icon src="icon_152x152.png" platform="ios" width="152" height="152" />
-	
+	<icon src="Icon.png" platform="ios" width="57" height="57" />
+	<icon src="Icon@2x.png" platform="ios" width="114" height="114" />
+	<icon src="Icon-40.png" platform="ios" width="40" height="40" />
+	<icon src="Icon-40@2x.png" platform="ios" width="80" height="80" />
+	<icon src="Icon-50.png" platform="ios" width="50" height="50" />
+	<icon src="Icon-50@2x.png" platform="ios" width="100" height="100" />
+	<icon src="Icon-60.png" platform="ios" width="60" height="60" />
+	<icon src="Icon-60@2x.png" platform="ios" width="120" height="120" />
+	<icon src="Icon-60@3x.png" platform="ios" width="180" height="180" />
+	<icon src="Icon-72.png" platform="ios" width="72" height="72" />
+	<icon src="Icon-72@2x.png" platform="ios" width="144" height="144" />
+	<icon src="Icon-76.png" platform="ios" width="76" height="76" />
+	<icon src="Icon-76@2x.png" platform="ios" width="152" height="152" />
+	<icon src="Icon-167.png" platform="ios" width="167" height="167" />
+	<icon src="Icon-small.png" platform="ios" width="29" height="29" />
+	<icon src="Icon-small@2x.png" platform="ios" width="58" height="58" />
+	<icon src="Icon-small@3x.png" platform="ios" width="87" height="87" />
+
 	<splash src="Default.png" platform="ios" width="480" height="800" />
 	<splash src="Default~iphone.png" platform="ios" width="320" height="480" />
 	<splash src="Default~ipad.png" platform="ios" width="480" height="800" />
@@ -70,7 +83,6 @@
 	<splash src="Default-Portrait@2x~ipad_1536x2008.png" platform="ios" width="1536" height="2008" />
 	<splash src="Default-Portrait@2x~ipad_1536x2048.png" platform="ios" width="1536" height="2048" />
 	<splash src="Default-Portrait~ipad_768x1024.png" platform="ios" width="768" height="1024" />
-
   </platform>
   
   <platform name="android" >
