@@ -85,8 +85,8 @@
 	<splash src="splash/Default-Portrait@2x~ipad_1536x2048.png" platform="ios" width="1536" height="2048" />
 	<splash src="splash/Default-Portrait~ipad_768x1024.png" platform="ios" width="768" height="1024" />
 
-	<icon src="icon/Icon-72.png" platform="android" qualifier="hdpi" />
-	<splash src="splash.png" platform="android" width="480" height="800" />
+	<icon src="icon.png" platform="android" />
+	<splash src="splash.png" platform="android" />
    
 	<platform name="winphone" />
 
