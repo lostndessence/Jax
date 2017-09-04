@@ -88,7 +88,7 @@
   </platform>
   
   <platform name="android" >
-	<icon src="icon.png" platform="android" />
+	<icon src="icon/Icon-72.png" platform="android" qualifier="hdpi" width="72" height="72" />
 	<splash src="splash.png" platform="android" width="480" height="800" />
   </platform>
    
