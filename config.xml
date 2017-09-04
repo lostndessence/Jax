@@ -22,7 +22,9 @@
     </plugin>-->
 	
 	
+
 	<plugin name="cordova-plugin-inappbrowser" spec="1.7.1" />
+	<plugin name="cordova-plugin-splash-screen" />
 	<!--<plugin name="cordova-plugin-whitelist" spec="1.2.2" /> No longer needed -->
 
 	
