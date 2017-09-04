@@ -88,6 +88,7 @@
   </platform>
   
   <platform name="android" >
+	<icon src="icon.png" platform="android" />
 	<splash src="splash.png" platform="android" width="480" height="800" />
   </platform>
    
