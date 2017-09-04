@@ -21,6 +21,7 @@
         <variable name="SENDER_ID" value="XXXXXXX" />
     </plugin>-->
 	
+	<plugin name="splash-screen" />
 	<plugin name="cordova-plugin-console" spec="1.0.7" />
 	<plugin name="cordova-plugin-dialogs" spec="1.2.1" />
 	<plugin name="cordova-plugin-inappbrowser" spec="1.7.1" />
