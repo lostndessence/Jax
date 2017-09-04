@@ -46,15 +46,16 @@
 	
   
   <!-- Assign Icon-->
-  <icon src="icon-ios.jpg" /><!-- Default -->
+  <icon src="icon-ios.png" /><!-- Default -->
+  <splash src="splash.png" platform="ios" width="320" height="568" />
   
   <platform name="ios">
 	<icon src="icon_180x180.png" platform="ios" width="180" height="180" />
 	<icon src="icon_76x76.png" platform="ios" width="76" height="76" />
 	<icon src="icon_120x120.png" platform="ios" width="120" height="120" />
 	<icon src="icon_152x152.png" platform="ios" width="152" height="152" />
-	<splash src="Splash_Screen.png" platform="ios" width="320" height="480" />
 	<splash src="splash_320x568.png" platform="ios" width="320" height="568" />
+	<splash src="splash_screen.png" platform="ios" width="320" height="480" />
 	<splash src="splash_640x960.png" platform="ios" width="640" height="960" />
 	<splash src="splash_640x1136.png" platform="ios" width="640" height="1136" />
 	<splash src="splash_750x1334.png" platform="ios" width="750" height="1334" />
@@ -63,7 +64,7 @@
   </platform>
   
   <platform name="android" >
-	<splash src="Splash_Screen.png" platform="android" width="320" height="480" />
+	<splash src="splash_screen.png" platform="android" width="320" height="480" />
   </platform>
    
   <platform name="winphone" />
