@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.jaxcohome.app" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.jaxcohome.app" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Jaxcohome</name>
     <description>
         Explore Jaxcohome with ease from your mobile phone. 
@@ -17,9 +17,9 @@
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
     
-	<plugin name="phonegap-plugin-push" spec="1.8.4" >
+	<!--<plugin name="phonegap-plugin-push" spec="1.8.4" >
         <variable name="SENDER_ID" value="XXXXXXX" />
-    </plugin>
+    </plugin>-->
 	
 	<plugin name="cordova-plugin-console" spec="1.0.7" />
 	<plugin name="cordova-plugin-dialogs" spec="1.2.1" />
@@ -47,48 +47,48 @@
 	
   
   <!-- Assign Icons and Splash-->
-  <icon src="Icon.png" /><!-- Default -->
-  <splash src="Default.png" /><!-- Default -->
+  <icon src="icon.png" /><!-- Default -->
+  <splash src="splash.png" /><!-- Default -->
   
   <platform name="ios">
-	<icon src="Icon.png" platform="ios" width="57" height="57" />
-	<icon src="Icon@2x.png" platform="ios" width="114" height="114" />
-	<icon src="Icon-40.png" platform="ios" width="40" height="40" />
-	<icon src="Icon-40@2x.png" platform="ios" width="80" height="80" />
-	<icon src="Icon-50.png" platform="ios" width="50" height="50" />
-	<icon src="Icon-50@2x.png" platform="ios" width="100" height="100" />
-	<icon src="Icon-60.png" platform="ios" width="60" height="60" />
-	<icon src="Icon-60@2x.png" platform="ios" width="120" height="120" />
-	<icon src="Icon-60@3x.png" platform="ios" width="180" height="180" />
-	<icon src="Icon-72.png" platform="ios" width="72" height="72" />
-	<icon src="Icon-72@2x.png" platform="ios" width="144" height="144" />
-	<icon src="Icon-76.png" platform="ios" width="76" height="76" />
-	<icon src="Icon-76@2x.png" platform="ios" width="152" height="152" />
-	<icon src="Icon-167.png" platform="ios" width="167" height="167" />
-	<icon src="Icon-small.png" platform="ios" width="29" height="29" />
-	<icon src="Icon-small@2x.png" platform="ios" width="58" height="58" />
-	<icon src="Icon-small@3x.png" platform="ios" width="87" height="87" />
+	<icon src="icon/Icon.png" platform="ios" width="57" height="57" />
+	<icon src="icon/Icon@2x.png" platform="ios" width="114" height="114" />
+	<icon src="icon/Icon-40.png" platform="ios" width="40" height="40" />
+	<icon src="icon/Icon-40@2x.png" platform="ios" width="80" height="80" />
+	<icon src="icon/Icon-50.png" platform="ios" width="50" height="50" />
+	<icon src="icon/Icon-50@2x.png" platform="ios" width="100" height="100" />
+	<icon src="icon/Icon-60.png" platform="ios" width="60" height="60" />
+	<icon src="icon/Icon-60@2x.png" platform="ios" width="120" height="120" />
+	<icon src="icon/Icon-60@3x.png" platform="ios" width="180" height="180" />
+	<icon src="icon/Icon-72.png" platform="ios" width="72" height="72" />
+	<icon src="icon/Icon-72@2x.png" platform="ios" width="144" height="144" />
+	<icon src="icon/Icon-76.png" platform="ios" width="76" height="76" />
+	<icon src="icon/Icon-76@2x.png" platform="ios" width="152" height="152" />
+	<icon src="icon/Icon-167.png" platform="ios" width="167" height="167" />
+	<icon src="icon/Icon-small.png" platform="ios" width="29" height="29" />
+	<icon src="icon/Icon-small@2x.png" platform="ios" width="58" height="58" />
+	<icon src="icon/Icon-small@3x.png" platform="ios" width="87" height="87" />
 
-	<splash src="Default.png" platform="ios" width="480" height="800" />
-	<splash src="Default~iphone.png" platform="ios" width="320" height="480" />
-	<splash src="Default~ipad.png" platform="ios" width="480" height="800" />
-	<splash src="Default@2x~iphone_640x960.png" platform="ios" width="640" height="960" />
-	<splash src="Default-568h@2x~iphone_640x1136.png" platform="ios" width="640" height="1136" />
-	<splash src="Default-750@2x~iphone6-landscape_1334x750.png" platform="ios" width="1334" height="750" />
-	<splash src="Default-750@2x~iphone6-portrait_750x1334.png" platform="ios" width="750" height="1334" />
-	<splash src="Default-1242@3x~iphone6s-landscape_2208x1242.png" platform="ios" width="2208" height="1242" />
-	<splash src="Default-1242@3x~iphone6s-portrait_1242x2208.png" platform="ios" width="1242" height="2208" />
-	<splash src="Default-Landscape@2x~ipad_2048x1496.png" platform="ios" width="2048" height="1496" />
-	<splash src="Default-Landscape@2x~ipad_2048x1536.png" platform="ios" width="2048" height="1536" />
-	<splash src="Default-Landscape~ipad_1024x748.png" platform="ios" width="1024" height="748" />
-	<splash src="Default-Landscape~ipad_1024x768.png" platform="ios" width="1024" height="768" />
-	<splash src="Default-Portrait@2x~ipad_1536x2008.png" platform="ios" width="1536" height="2008" />
-	<splash src="Default-Portrait@2x~ipad_1536x2048.png" platform="ios" width="1536" height="2048" />
-	<splash src="Default-Portrait~ipad_768x1024.png" platform="ios" width="768" height="1024" />
+	<splash src="splash/Default.png" platform="ios" width="480" height="800" />
+	<splash src="splash/Default~iphone.png" platform="ios" width="320" height="480" />
+	<splash src="splash/Default~ipad.png" platform="ios" width="480" height="800" />
+	<splash src="splash/Default@2x~iphone_640x960.png" platform="ios" width="640" height="960" />
+	<splash src="splash/Default-568h@2x~iphone_640x1136.png" platform="ios" width="640" height="1136" />
+	<splash src="splash/Default-750@2x~iphone6-landscape_1334x750.png" platform="ios" width="1334" height="750" />
+	<splash src="splash/Default-750@2x~iphone6-portrait_750x1334.png" platform="ios" width="750" height="1334" />
+	<splash src="splash/Default-1242@3x~iphone6s-landscape_2208x1242.png" platform="ios" width="2208" height="1242" />
+	<splash src="splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" platform="ios" width="1242" height="2208" />
+	<splash src="splash/Default-Landscape@2x~ipad_2048x1496.png" platform="ios" width="2048" height="1496" />
+	<splash src="splash/Default-Landscape@2x~ipad_2048x1536.png" platform="ios" width="2048" height="1536" />
+	<splash src="splash/Default-Landscape~ipad_1024x748.png" platform="ios" width="1024" height="748" />
+	<splash src="splash/Default-Landscape~ipad_1024x768.png" platform="ios" width="1024" height="768" />
+	<splash src="splash/Default-Portrait@2x~ipad_1536x2008.png" platform="ios" width="1536" height="2008" />
+	<splash src="splash/Default-Portrait@2x~ipad_1536x2048.png" platform="ios" width="1536" height="2048" />
+	<splash src="splash/Default-Portrait~ipad_768x1024.png" platform="ios" width="768" height="1024" />
   </platform>
   
   <platform name="android" >
-	<splash src="splash_screen.png" platform="android" width="320" height="480" />
+	<splash src="splash.png" platform="android" width="480" height="800" />
   </platform>
    
   <platform name="winphone" />
